@@ -24,11 +24,3 @@ class Account:
         return self.account_name
 
 
-# Example usage
-account = Account("John Doe")
-print(account.get_name())  # Output: John Doe
-print(account.get_balance())  # Output: 0
-
-print(account.deposit(100))  # Output: Deposited 100 units. New balance: 100
-print(account.withdraw(30))  # Output: Withdrew 30 units. New balance: 70
-print(account.get_balance())  # Output: 70
