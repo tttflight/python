@@ -1,7 +1,7 @@
 class Account:
     def __init__(self, name: str) -> None:
-        self.account_name = name
-        self.account_balance = 0
+        self.__account_name = name
+        self.__account_balance = 0
 
     def deposit(self, amount: float) -> bool:
         """
@@ -10,7 +10,7 @@ class Account:
         :return: Returns True or False boolean
         """
         if amount > 0:
-            self.account_balance += amount
+            self.__account_balance += amount
             return True
         else:
             return False
@@ -21,8 +21,8 @@ class Account:
         :param amount: The amount to decrement
         :return: Returns True or False boolean
         """
-        if 0 < amount <= self.account_balance:
-            self.account_balance -= amount
+        if 0 < amount <= self.__account_balance:
+            self.__account_balance -= amount
             return True
         else:
             return False
@@ -32,13 +32,13 @@ class Account:
         This function gets the account balance
         :return: Account balance
         """
-        return self.account_balance
+        return self.__account_balance
 
     def get_name(self) -> str:
         """
         This functions gets the account name
         :return: Account name
         """
-        return self.account_name
+        return self.__account_name
 
 
